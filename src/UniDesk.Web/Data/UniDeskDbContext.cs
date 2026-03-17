@@ -11,9 +11,14 @@ public class UniDeskDbContext : DbContext
 
     public DbSet<Ticket> Tickets => Set<Ticket>();
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(UniDeskDbContext).Assembly);
+    }
+
     public override int SaveChanges()
     {
-
         var entries = ChangeTracker.Entries<Ticket>()
             .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
 
