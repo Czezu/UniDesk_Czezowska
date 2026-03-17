@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UniDesk.Web.Services;
 using UniDesk.Web.Models;
+using UniDesk.Web.DTOs;
+
+namespace UniDesk.Web.Controllers;
 
 public class TicketsController : Controller
 {
@@ -11,18 +14,15 @@ public class TicketsController : Controller
         _ticketService = ticketService;
     }
 
-    public IActionResult Index(string search)
+    public async Task<IActionResult> Index([FromQuery] TicketQueryParameters queryParams)
     {
-        var tickets = string.IsNullOrEmpty(search)
-            ? _ticketService.GetAll()
-            : _ticketService.Search(search);
-
-        return View(tickets);
+        var result = await _ticketService.GetFilteredTicketsAsync(queryParams);
+        return View(result);
     }
 
-    public IActionResult Details(int id)
+    public async Task<IActionResult> Details(int id)
     {
-        var ticket = _ticketService.GetById(id);
+        var ticket = await _ticketService.GetByIdAsync(id);
         if (ticket == null)
         {
             return NotFound();
@@ -37,14 +37,14 @@ public class TicketsController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(Ticket newTicket)
+    public async Task<IActionResult> Create(Ticket newTicket)
     {
         if (!ModelState.IsValid)
         {
             return View(newTicket);
         }
 
-        _ticketService.Add(newTicket);
+        await _ticketService.AddAsync(newTicket);
         return RedirectToAction(nameof(Index));
     }
 }

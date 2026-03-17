@@ -1,9 +1,11 @@
 ﻿using UniDesk.Web.Models;
+using UniDesk.Web.DTOs;
+
+namespace UniDesk.Web.Services;
 
 public interface ITicketService
 {
-    IEnumerable<Ticket> GetAll();
-    void Add(Ticket ticket);
-    Ticket? GetById(int id);
-    IEnumerable<Ticket> Search(string search);
+    Task<PagedResult<TicketListDto>> GetFilteredTicketsAsync(TicketQueryParameters queryParams);
+    Task<Ticket?> GetByIdAsync(int id);
+    Task AddAsync(Ticket ticket);
 }

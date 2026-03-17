@@ -1,10 +1,15 @@
-﻿@model IEnumerable<UniDesk.Web.Models.Ticket>
+﻿@model UniDesk.Web.DTOs.PagedResult<UniDesk.Web.DTOs.TicketListDto>
 
 <h1>Lista Zgłoszeń</h1>
 
 <form method="get" class="mb-3 d-flex gap-2">
-    <input type="text" name="search" class="form-control" placeholder="Szukaj po tytule..." />
-    <button type="submit" class="btn btn-primary">Szukaj</button>
+    <select name="Status" class="form-control" onchange="this.form.submit()">
+        <option value="">Wszystkie statusy</option>
+        <option value="New">Nowe</option>
+        <option value="Open">Otwarte</option>
+        <option value="Closed">Zamknięte</option>
+    </select>
+    <button type="submit" class="btn btn-primary">Filtruj</button>
 </form>
 
 <p><a asp-action="Create" class="btn btn-success">Nowe zgłoszenie</a></p>
@@ -14,24 +19,26 @@
         <tr>
             <th>ID</th>
             <th>Tytuł</th>
+            <th>Data</th>
             <th>Status</th>
             <th>Akcje</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var ticket in Model)
+        @foreach (var ticket in Model.Items)
         {
             var statusBadge = ticket.Status switch
             {
-                UniDesk.Web.Models.TicketStatus.New => "bg-info",
-                UniDesk.Web.Models.TicketStatus.Open => "bg-warning",
-                UniDesk.Web.Models.TicketStatus.Closed => "bg-success",
+                "New" => "bg-info",
+                "Open" => "bg-warning",
+                "Closed" => "bg-success",
                 _ => "bg-secondary"
             };
 
             <tr>
                 <td>@ticket.Id</td>
                 <td>@ticket.Title</td>
+                <td>@ticket.CreatedAt.ToString("yyyy-MM-dd HH:mm")</td>
                 <td><span class="badge @statusBadge">@ticket.Status</span></td>
                 <td>
                     <a asp-action="Details" asp-route-id="@ticket.Id" class="btn btn-sm btn-outline-primary">Szczegóły</a>
@@ -40,3 +47,14 @@
         }
     </tbody>
 </table>
+
+<nav>
+    <ul class="pagination">
+        @for (int i = 1; i <= Math.Ceiling((double)Model.TotalCount / Model.PageSize); i++)
+        {
+            <li class="page-item @(i == Model.Page ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-page="@i">@i</a>
+            </li>
+        }
+    </ul>
+</nav>

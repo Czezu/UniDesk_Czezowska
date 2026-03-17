@@ -18,23 +18,16 @@ public class TicketsApiController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<TicketReadDto>> GetAll()
+    public async Task<ActionResult<PagedResult<TicketListDto>>> GetAll([FromQuery] TicketQueryParameters queryParams)
     {
-        var tickets = _ticketService.GetAll();
-        var dtos = tickets.Select(t => new TicketReadDto
-        {
-            Id = t.Id,
-            Title = t.Title,
-            Status = t.Status.ToString(),
-            CreatedAt = t.CreatedAt
-        });
-        return Ok(dtos);
+        var result = await _ticketService.GetFilteredTicketsAsync(queryParams);
+        return Ok(result);
     }
 
     [HttpGet("{id}")]
-    public ActionResult<TicketReadDto> GetById(int id)
+    public async Task<ActionResult<TicketReadDto>> GetById(int id)
     {
-        var ticket = _ticketService.GetById(id);
+        var ticket = await _ticketService.GetByIdAsync(id);
         if (ticket == null) return NotFound();
 
         return Ok(new TicketReadDto
@@ -47,7 +40,7 @@ public class TicketsApiController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult<TicketReadDto> Create(CreateTicketRequest request)
+    public async Task<ActionResult<TicketReadDto>> Create(CreateTicketRequest request)
     {
         try
         {
@@ -57,7 +50,7 @@ public class TicketsApiController : ControllerBase
                 Description = request.Description
             };
 
-            _ticketService.Add(newTicket);
+            await _ticketService.AddAsync(newTicket);
 
             var dto = new TicketReadDto
             {
@@ -80,9 +73,9 @@ public class TicketsApiController : ControllerBase
     }
 
     [HttpPatch("{id}/status")]
-    public IActionResult UpdateStatus(int id, [FromBody] TicketStatus newStatus)
+    public async Task<IActionResult> UpdateStatus(int id, [FromBody] TicketStatus newStatus)
     {
-        var ticket = _ticketService.GetById(id);
+        var ticket = await _ticketService.GetByIdAsync(id);
         if (ticket == null) return NotFound();
 
         try
