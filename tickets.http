@@ -4,7 +4,7 @@
 GET https://{{hostname}}:{{port}}/api/tickets
 Accept: application/json
 
-### Test 1: Dodawanie nowego zg³oszenia (POST)
+### Test 1: Dodawanie nowego zg³oszenia
 POST https://localhost:{{port}}/api/tickets
 Content-Type: application/json
 
@@ -13,19 +13,34 @@ Content-Type: application/json
   "description": "Zaciêcie papieru w pokoju 205"
 }
 
-### Test 2: Pobieranie po ID (Zmieñ '1' na ID które dosta³aœ powy¿ej)
+### Test 2: Pobieranie po ID
 GET https://localhost:{{port}}/api/tickets/1
 Accept: application/json
 
-### Test 3: Próba pobrania nieistniej¹cego ID (Status 404)
+### Test 3: Próba pobrania nieistniej¹cego ID 
 GET https://localhost:{{port}}/api/tickets/999
 Accept: application/json
 
-### Test 4: Walidacja (Wyœlij za krótki tytu³ - Status 400)
+### Test 4: Walidacja 
 POST https://localhost:{{port}}/api/tickets
 Content-Type: application/json
 
 {
   "title": "A",
   "description": "Test walidacji"
+}
+
+### Test PATCH - Zmiana statusu zg³oszenia nr 1 na "Open"
+PATCH https://localhost:{{port}}/api/tickets/1/status
+Content-Type: application/json
+
+1
+
+### Test ProblemDetails
+POST https://localhost:{{port}}/api/tickets
+Content-Type: application/json
+
+{
+  "title": "X",
+  "description": "Zbyt krótki tytu³"
 }

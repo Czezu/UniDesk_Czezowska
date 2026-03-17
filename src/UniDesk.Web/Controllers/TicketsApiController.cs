@@ -20,7 +20,6 @@ public class TicketsApiController : ControllerBase
     public ActionResult<IEnumerable<TicketReadDto>> GetAll()
     {
         var tickets = _ticketService.GetAll();
-
         var dtos = tickets.Select(t => new TicketReadDto
         {
             Id = t.Id,
@@ -28,7 +27,6 @@ public class TicketsApiController : ControllerBase
             Status = t.Status.ToString(),
             CreatedAt = t.CreatedAt
         });
-
         return Ok(dtos);
     }
 
@@ -36,21 +34,15 @@ public class TicketsApiController : ControllerBase
     public ActionResult<TicketReadDto> GetById(int id)
     {
         var ticket = _ticketService.GetById(id);
+        if (ticket == null) return NotFound();
 
-        if (ticket == null)
-        {
-            return NotFound();
-        }
-
-        var dto = new TicketReadDto
+        return Ok(new TicketReadDto
         {
             Id = ticket.Id,
             Title = ticket.Title,
             Status = ticket.Status.ToString(),
             CreatedAt = ticket.CreatedAt
-        };
-
-        return Ok(dto);
+        });
     }
 
     [HttpPost]
@@ -79,11 +71,7 @@ public class TicketsApiController : ControllerBase
     public IActionResult UpdateStatus(int id, [FromBody] TicketStatus newStatus)
     {
         var ticket = _ticketService.GetById(id);
-
-        if (ticket == null)
-        {
-            return NotFound();
-        }
+        if (ticket == null) return NotFound();
 
         ticket.Status = newStatus;
         return NoContent();
