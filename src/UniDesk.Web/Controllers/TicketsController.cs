@@ -1,12 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using UniDesk.Web.Services;
 
-namespace UniDesk.Web.Controllers
+public class TicketsController : Controller
 {
-    public class TicketsController : Controller
+    private readonly ITicketService _ticketService;
+
+    public TicketsController(ITicketService ticketService)
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        _ticketService = ticketService;
+    }
+
+    public IActionResult Index()
+    {
+        var tickets = _ticketService.GetAll();
+        return View(tickets);
     }
 }

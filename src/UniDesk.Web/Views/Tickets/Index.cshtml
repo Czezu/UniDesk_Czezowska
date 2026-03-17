@@ -1,6 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Lista Zgłoszeń";
-}
+﻿@model IEnumerable<UniDesk.Web.Models.Ticket>
 
 <h1>Lista Zgłoszeń</h1>
-<p>Status: Środowisko skonfigurowane poprawnie.</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tytuł</th>
+            <th>Status</th>
+            <th>Data</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.Id</td>
+                <td>@ticket.Title</td>
+                <td>@ticket.Status</td>
+                <td>@ticket.CreatedAt.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
