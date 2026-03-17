@@ -2,6 +2,7 @@
 using UniDesk.Web.Data;
 using UniDesk.Web.Models;
 using UniDesk.Web.DTOs;
+using System.Linq.Expressions;
 
 namespace UniDesk.Web.Services;
 
@@ -23,12 +24,23 @@ public class TicketService : ITicketService
             query = query.Where(t => t.Status == queryParams.Status.Value);
         }
 
-        query = queryParams.SortBy?.ToLower() switch
+        var columnsSelector = new Dictionary<string, Expression<Func<Ticket, object>>>
         {
-            "title" => query.OrderBy(t => t.Title),
-            "status" => query.OrderBy(t => t.Status),
-            _ => query.OrderByDescending(t => t.CreatedAt)
+            { "title", t => t.Title },
+            { "status", t => t.Status },
+            { "date", t => t.CreatedAt }
         };
+
+        var sortBy = queryParams.SortBy?.ToLower();
+
+        if (!string.IsNullOrEmpty(sortBy) && columnsSelector.ContainsKey(sortBy))
+        {
+            query = query.OrderBy(columnsSelector[sortBy]);
+        }
+        else
+        {
+            query = query.OrderByDescending(t => t.CreatedAt);
+        }
 
         var totalCount = await query.CountAsync();
 
