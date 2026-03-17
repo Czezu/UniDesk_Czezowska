@@ -1,0 +1,5 @@
+@hostname = localhost
+@port = 7265
+
+GET https://{{hostname}}:{{port}}/api/tickets
+Accept: application/json
