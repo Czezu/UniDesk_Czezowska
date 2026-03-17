@@ -1,0 +1,12 @@
+﻿@model UniDesk.Web.Models.Ticket
+
+<h1>Szczegóły zgłoszenia #@Model.Id</h1>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text">@Model.Description</p>
+        <p><strong>Status:</strong> @Model.Status</p>
+        <p><strong>Data:</strong> @Model.CreatedAt</p>
+    </div>
+</div>
+<a asp-action="Index" class="btn btn-secondary mt-3">Powrót do listy</a>

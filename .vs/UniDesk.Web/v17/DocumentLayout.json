@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\views\\tickets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\views\\tickets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\views\\tickets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\views\\tickets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\services\\ticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,6 +13,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\services\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\services\\iticketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\views\\tickets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\views\\tickets\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\views\\tickets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\views\\tickets\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\unidesk.web.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -62,50 +62,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TicketsController.cs",
-              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\TicketsController.cs",
-              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Controllers\\TicketsController.cs",
-              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\TicketsController.cs",
-              "RelativeToolTip": "src\\UniDesk.Web\\Controllers\\TicketsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Title": "ITicketService.cs",
+              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\ITicketService.cs",
+              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Services\\ITicketService.cs",
+              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\ITicketService.cs",
+              "RelativeToolTip": "src\\UniDesk.Web\\Services\\ITicketService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-06T21:23:24.116Z",
+              "WhenOpened": "2026-03-17T15:53:12.155Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
               "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
               "RelativeToolTip": "src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAZAAAA",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-06T21:30:27.532Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
-              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
-              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
-              "RelativeToolTip": "src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-03-17T16:07:18.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Program.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Program.cs",
@@ -117,27 +104,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "TicketsController.cs",
+              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\TicketsController.cs",
+              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Controllers\\TicketsController.cs",
+              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\TicketsController.cs",
+              "RelativeToolTip": "src\\UniDesk.Web\\Controllers\\TicketsController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAowA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-06T21:23:24.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\TicketService.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Services\\TicketService.cs",
               "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\TicketService.cs",
               "RelativeToolTip": "src\\UniDesk.Web\\Services\\TicketService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAUAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAowBwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T15:53:38.268Z"
+              "WhenOpened": "2026-03-17T15:53:38.268Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ITicketService.cs",
-              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\ITicketService.cs",
-              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Services\\ITicketService.cs",
-              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\ITicketService.cs",
-              "RelativeToolTip": "src\\UniDesk.Web\\Services\\ITicketService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T15:53:12.155Z"
+              "DocumentIndex": 4,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
+              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
+              "RelativeToolTip": "src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-17T16:07:18.608Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

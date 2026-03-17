@@ -20,6 +20,11 @@
 
   <ItemGroup>
     <_ContentIncludedByDefault Remove="Views\Tickets\Create.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Tickets\Details.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Tickets\Details.cshtml" />
   </ItemGroup>
 
 </Project>

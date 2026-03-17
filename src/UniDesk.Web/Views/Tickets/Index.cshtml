@@ -1,26 +1,41 @@
 ﻿@model IEnumerable<UniDesk.Web.Models.Ticket>
 
 <h1>Lista Zgłoszeń</h1>
-<p>
-    <a asp-action="Create" class="btn btn-success">Stwórz nowe zgłoszenie</a>
-</p>
+
+<form method="get" class="mb-3 d-flex gap-2">
+    <input type="text" name="search" class="form-control" placeholder="Szukaj po tytule..." />
+    <button type="submit" class="btn btn-primary">Szukaj</button>
+</form>
+
+<p><a asp-action="Create" class="btn btn-success">Nowe zgłoszenie</a></p>
+
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
             <th>Tytuł</th>
             <th>Status</th>
-            <th>Data</th>
+            <th>Akcje</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var ticket in Model)
         {
+            var statusBadge = ticket.Status switch
+            {
+                UniDesk.Web.Models.TicketStatus.New => "bg-info",
+                UniDesk.Web.Models.TicketStatus.Open => "bg-warning",
+                UniDesk.Web.Models.TicketStatus.Closed => "bg-success",
+                _ => "bg-secondary"
+            };
+
             <tr>
                 <td>@ticket.Id</td>
                 <td>@ticket.Title</td>
-                <td>@ticket.Status</td>
-                <td>@ticket.CreatedAt.ToShortDateString()</td>
+                <td><span class="badge @statusBadge">@ticket.Status</span></td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@ticket.Id" class="btn btn-sm btn-outline-primary">Szczegóły</a>
+                </td>
             </tr>
         }
     </tbody>

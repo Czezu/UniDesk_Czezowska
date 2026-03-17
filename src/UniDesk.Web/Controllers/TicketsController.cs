@@ -11,10 +11,23 @@ public class TicketsController : Controller
         _ticketService = ticketService;
     }
 
-    public IActionResult Index()
+    public IActionResult Index(string search)
     {
-        var tickets = _ticketService.GetAll();
+        var tickets = string.IsNullOrEmpty(search)
+            ? _ticketService.GetAll()
+            : _ticketService.Search(search);
+
         return View(tickets);
+    }
+
+    public IActionResult Details(int id)
+    {
+        var ticket = _ticketService.GetById(id);
+        if (ticket == null)
+        {
+            return NotFound();
+        }
+        return View(ticket);
     }
 
     [HttpGet]
