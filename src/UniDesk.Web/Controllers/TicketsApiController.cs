@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UniDesk.Web.Services;
+using UniDesk.Web.Models;
 using UniDesk.Web.DTOs;
 
 namespace UniDesk.Web.Controllers;
@@ -29,5 +30,62 @@ public class TicketsApiController : ControllerBase
         });
 
         return Ok(dtos);
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<TicketReadDto> GetById(int id)
+    {
+        var ticket = _ticketService.GetById(id);
+
+        if (ticket == null)
+        {
+            return NotFound();
+        }
+
+        var dto = new TicketReadDto
+        {
+            Id = ticket.Id,
+            Title = ticket.Title,
+            Status = ticket.Status.ToString(),
+            CreatedAt = ticket.CreatedAt
+        };
+
+        return Ok(dto);
+    }
+
+    [HttpPost]
+    public ActionResult<TicketReadDto> Create(CreateTicketRequest request)
+    {
+        var newTicket = new Ticket
+        {
+            Title = request.Title,
+            Description = request.Description
+        };
+
+        _ticketService.Add(newTicket);
+
+        var dto = new TicketReadDto
+        {
+            Id = newTicket.Id,
+            Title = newTicket.Title,
+            Status = newTicket.Status.ToString(),
+            CreatedAt = newTicket.CreatedAt
+        };
+
+        return CreatedAtAction(nameof(GetById), new { id = dto.Id }, dto);
+    }
+
+    [HttpPatch("{id}/status")]
+    public IActionResult UpdateStatus(int id, [FromBody] TicketStatus newStatus)
+    {
+        var ticket = _ticketService.GetById(id);
+
+        if (ticket == null)
+        {
+            return NotFound();
+        }
+
+        ticket.Status = newStatus;
+        return NoContent();
     }
 }
