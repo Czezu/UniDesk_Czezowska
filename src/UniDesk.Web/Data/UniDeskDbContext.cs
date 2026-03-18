@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 using UniDesk.Web.Models;
 
 namespace UniDesk.Web.Data;
@@ -11,4 +10,21 @@ public class UniDeskDbContext : DbContext
     }
 
     public DbSet<Ticket> Tickets => Set<Ticket>();
+
+    public override int SaveChanges()
+    {
+
+        var entries = ChangeTracker.Entries<Ticket>()
+            .Where(e => e.State == EntityState.Added || e.State == EntityState.Modified);
+
+        foreach (var entry in entries)
+        {
+            if (entry.State == EntityState.Added)
+            {
+                entry.Entity.CreatedAt = DateTime.Now;
+            }
+        }
+
+        return base.SaveChanges();
+    }
 }

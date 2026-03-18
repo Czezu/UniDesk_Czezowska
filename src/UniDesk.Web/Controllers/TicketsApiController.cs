@@ -2,6 +2,7 @@
 using UniDesk.Web.Services;
 using UniDesk.Web.Models;
 using UniDesk.Web.DTOs;
+using Microsoft.EntityFrameworkCore;
 
 namespace UniDesk.Web.Controllers;
 
@@ -48,23 +49,34 @@ public class TicketsApiController : ControllerBase
     [HttpPost]
     public ActionResult<TicketReadDto> Create(CreateTicketRequest request)
     {
-        var newTicket = new Ticket
+        try
         {
-            Title = request.Title,
-            Description = request.Description
-        };
+            var newTicket = new Ticket
+            {
+                Title = request.Title,
+                Description = request.Description
+            };
 
-        _ticketService.Add(newTicket);
+            _ticketService.Add(newTicket);
 
-        var dto = new TicketReadDto
+            var dto = new TicketReadDto
+            {
+                Id = newTicket.Id,
+                Title = newTicket.Title,
+                Status = newTicket.Status.ToString(),
+                CreatedAt = newTicket.CreatedAt
+            };
+
+            return CreatedAtAction(nameof(GetById), new { id = dto.Id }, dto);
+        }
+        catch (DbUpdateException ex)
         {
-            Id = newTicket.Id,
-            Title = newTicket.Title,
-            Status = newTicket.Status.ToString(),
-            CreatedAt = newTicket.CreatedAt
-        };
-
-        return CreatedAtAction(nameof(GetById), new { id = dto.Id }, dto);
+            return BadRequest(new
+            {
+                error = "Wystąpił błąd podczas zapisu do bazy danych.",
+                details = ex.Message
+            });
+        }
     }
 
     [HttpPatch("{id}/status")]
@@ -73,7 +85,14 @@ public class TicketsApiController : ControllerBase
         var ticket = _ticketService.GetById(id);
         if (ticket == null) return NotFound();
 
-        ticket.Status = newStatus;
-        return NoContent();
+        try
+        {
+            ticket.Status = newStatus;
+            return NoContent();
+        }
+        catch (DbUpdateException)
+        {
+            return BadRequest(new { error = "Nie udało się zaktualizować statusu bazy danych." });
+        }
     }
 }
