@@ -1,29 +1,44 @@
-﻿using UniDesk.Web.Models;
+﻿using UniDesk.Web.Data;
+using UniDesk.Web.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace UniDesk.Web.Services;
 
 public class TicketService : ITicketService
 {
-    private readonly List<Ticket> _tickets = new();
+    private readonly UniDeskDbContext _context;
 
-    public IEnumerable<Ticket> GetAll() => _tickets;
-
-    public void Add(Ticket ticket)
+    public TicketService(UniDeskDbContext context)
     {
-        ticket.Id = _tickets.Count > 0 ? _tickets.Max(t => t.Id) + 1 : 1;
-        ticket.CreatedAt = DateTime.Now;
-        ticket.Status = TicketStatus.New;
-        _tickets.Add(ticket);
+        _context = context;
     }
 
-    public Ticket? GetById(int id)
+    public IEnumerable<Ticket> GetAll()
     {
-        return _tickets.FirstOrDefault(t => t.Id == id);
+        return _context.Tickets.ToList();
     }
 
     public IEnumerable<Ticket> Search(string search)
     {
-        if (string.IsNullOrWhiteSpace(search)) return _tickets;
+        if (string.IsNullOrWhiteSpace(search)) return _context.Tickets.ToList();
 
-        return _tickets.Where(t => t.Title.Contains(search, StringComparison.OrdinalIgnoreCase));
+        return _context.Tickets
+            .Where(t => t.Title.ToLower().Contains(search.ToLower()))
+            .ToList();
+    }
+
+    public Ticket? GetById(int id)
+    {
+        return _context.Tickets.FirstOrDefault(t => t.Id == id);
+    }
+
+    public void Add(Ticket ticket)
+    {
+
+        ticket.CreatedAt = DateTime.Now;
+        ticket.Status = TicketStatus.New;
+
+        _context.Tickets.Add(ticket);
+        _context.SaveChanges();
     }
 }
