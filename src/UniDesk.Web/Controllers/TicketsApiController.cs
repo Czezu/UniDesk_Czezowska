@@ -81,11 +81,14 @@ public class TicketsApiController : ControllerBase
         try
         {
             ticket.Status = newStatus;
+
+            await _ticketService.UpdateAsync(ticket);
+
             return NoContent();
         }
         catch (DbUpdateException)
         {
-            return BadRequest(new { error = "Nie udało się zaktualizować statusu bazy danych." });
+            return BadRequest(new { error = "Nie udało się zaktualizować statusu w bazie danych." });
         }
     }
 }

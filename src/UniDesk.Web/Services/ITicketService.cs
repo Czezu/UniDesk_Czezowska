@@ -8,4 +8,6 @@ public interface ITicketService
     Task<PagedResult<TicketListDto>> GetFilteredTicketsAsync(TicketQueryParameters queryParams);
     Task<Ticket?> GetByIdAsync(int id);
     Task AddAsync(Ticket ticket);
+
+    Task UpdateAsync(Ticket ticket);
 }

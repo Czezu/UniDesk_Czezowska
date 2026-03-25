@@ -47,4 +47,18 @@ public class TicketsController : Controller
         await _ticketService.AddAsync(newTicket);
         return RedirectToAction(nameof(Index));
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Close(int id)
+    {
+        var ticket = await _ticketService.GetByIdAsync(id);
+
+        if (ticket != null)
+        {
+            ticket.Status = TicketStatus.Closed;
+            await _ticketService.UpdateAsync(ticket);
+        }
+
+        return RedirectToAction(nameof(Index));
+    }
 }

@@ -67,7 +67,17 @@ public class TicketService : ITicketService
     public async Task AddAsync(Ticket ticket)
     {
         ticket.Status = TicketStatus.New;
+        if (ticket.CreatedAt == default)
+        {
+            ticket.CreatedAt = DateTime.Now;
+        }
         _context.Tickets.Add(ticket);
+        await _context.SaveChangesAsync();
+    }
+
+    public async Task UpdateAsync(Ticket ticket)
+    {
+        _context.Tickets.Update(ticket);
         await _context.SaveChangesAsync();
     }
 }
