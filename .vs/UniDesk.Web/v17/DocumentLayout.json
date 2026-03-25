@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\views\\tickets\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\views\\tickets\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|c:\\users\\dczez\\desktop\\unidesk_czezowska\\src\\unidesk.web\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6326355F-474B-4836-8325-1C384A9ABE5E}|src\\UniDesk.Web\\UniDesk.Web.csproj|solutionrelative:src\\unidesk.web\\controllers\\ticketscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -106,11 +110,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Details.cshtml",
+              "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Tickets\\Details.cshtml",
+              "ToolTip": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Details.cshtml",
+              "RelativeToolTip": "src\\UniDesk.Web\\Views\\Tickets\\Details.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-03-25T18:29:44.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PagedResult.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\DTOs\\PagedResult.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\DTOs\\PagedResult.cs",
@@ -118,12 +135,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\DTOs\\PagedResult.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T19:52:35.667Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T19:52:35.667Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TicketsApiController.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\TicketsApiController.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Controllers\\TicketsApiController.cs",
@@ -131,12 +147,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\Controllers\\TicketsApiController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T16:31:35.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T16:31:35.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ITicketService.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\ITicketService.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Services\\ITicketService.cs",
@@ -144,12 +159,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\Services\\ITicketService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T15:53:12.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T15:53:12.155Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TicketsController.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\TicketsController.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Controllers\\TicketsController.cs",
@@ -162,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
@@ -170,12 +184,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\Views\\Tickets\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEQAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-06T21:30:27.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-06T21:30:27.532Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "TicketListDto.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\DTOs\\TicketListDto.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\DTOs\\TicketListDto.cs",
@@ -183,12 +196,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\DTOs\\TicketListDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T19:51:58.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T19:51:58.797Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "UniDeskDbContext.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Data\\UniDeskDbContext.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Data\\UniDeskDbContext.cs",
@@ -196,12 +208,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\Data\\UniDeskDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T17:55:37.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T17:55:37.75Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TicketService.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Services\\TicketService.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Services\\TicketService.cs",
@@ -209,12 +220,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\Services\\TicketService.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAQwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T15:53:38.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T15:53:38.268Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TicketQueryParameters.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\DTOs\\TicketQueryParameters.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\DTOs\\TicketQueryParameters.cs",
@@ -222,12 +232,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\DTOs\\TicketQueryParameters.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-17T19:53:18.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T19:53:18.745Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\appsettings.Development.json",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\appsettings.Development.json",
@@ -235,12 +244,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-17T19:59:25.578Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-17T19:59:25.578Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "TicketReadDto.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\DTOs\\TicketReadDto.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\DTOs\\TicketReadDto.cs",
@@ -252,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "tickets.http",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\tickets.http",
               "RelativeDocumentMoniker": "tickets.http",
@@ -264,7 +272,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "TicketConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Data\\Configurations\\TicketConfiguration.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Data\\Configurations\\TicketConfiguration.cs",
@@ -272,12 +280,11 @@
               "RelativeToolTip": "src\\UniDesk.Web\\Data\\Configurations\\TicketConfiguration.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T18:30:24.079Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-18T18:30:24.079Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Program.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Program.cs",
@@ -289,7 +296,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\appsettings.json",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\appsettings.json",
@@ -301,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "CreateTicketRequest.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\DTOs\\CreateTicketRequest.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\DTOs\\CreateTicketRequest.cs",
@@ -313,7 +320,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "UniDesk.Web.csproj",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\UniDesk.Web.csproj",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\UniDesk.Web.csproj",
@@ -325,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Tickets\\Create.cshtml",
@@ -337,7 +344,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Ticket.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Models\\Ticket.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Models\\Ticket.cs",
@@ -349,7 +356,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -361,7 +368,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Home\\About.cshtml",
@@ -373,7 +380,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Controllers\\HomeController.cs",
@@ -385,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Shared\\_Layout.cshtml",
@@ -397,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\dczez\\Desktop\\UniDesk_Czezowska\\src\\UniDesk.Web\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "src\\UniDesk.Web\\Views\\Home\\Index.cshtml",
